@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6ca31e7-344f-436f-b795-edf53c1ac397" name="Changes" comment="">
+    <list default="true" id="e6ca31e7-344f-436f-b795-edf53c1ac397" name="Changes" comment="Add programa IdentificadorPoseComAngulo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controle do servo pela serial/Controle_do_servo_pela_serial/Controle_do_servo_pela_serial/Controle_do_servo_pela_serial.ino" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/LeitorDeAngulo.py" beforeDir="false" />
@@ -116,6 +116,14 @@
       <option name="presentableId" value="Default" />
       <updated>1640011233311</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add programa IdentificadorPoseComAngulo">
+      <created>1643743559334</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1643743559335</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,5 +136,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add programa IdentificadorPoseComAngulo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add programa IdentificadorPoseComAngulo" />
   </component>
 </project>
