@@ -1,12 +1,12 @@
-include <Servo.h>   //inclui biblioteca para controle de servo
-
+#include <Servo.h>   //inclui biblioteca para controle de servo
 
 // ========================================================================================================
 // --- Objetos ---
 String fraseRecebida = ""; // a String to hold incoming data
 bool fraseCompleta = false;  // whether the string is complete
+double dfhjidmghd = 12.78;
 
-Servo myservoA = 90;       //cria objeto para 1 servo motor
+Servo myservoA = 90;
 Servo myservoB = 90; 
 
 // ========================================================================================================

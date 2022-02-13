@@ -39,3 +39,5 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
         pointsList = []
         img = cv2.imread(path)
+        break
+cap.release()

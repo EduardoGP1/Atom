@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e6ca31e7-344f-436f-b795-edf53c1ac397" name="Changes" comment="Add programa IdentificadorPoseComAngulo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controle do servo pela serial/Controle_do_servo_pela_serial/Controle_do_servo_pela_serial/Controle_do_servo_pela_serial.ino" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeitorDeAngulo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodificadorDeAngulo.py" beforeDir="false" afterPath="$PROJECT_DIR$/CodificadorDeAngulo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentificadorPoseComAngulo.py" beforeDir="false" afterPath="$PROJECT_DIR$/IdentificadorPoseComAngulo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeitorDePose.py" beforeDir="false" afterPath="$PROJECT_DIR$/LeitorDePose.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,18 +33,19 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/LeitorDePose.py" />
+    <property name="TODO_SCOPE" value="All Places" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/IdentificadorPoseComAngulo.py" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="Python.IdentificadorPoseComAngulo">
+  <component name="RunManager" selected="Python.CodificadorDeAngulo">
     <configuration name="CodificadorDeAngulo" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Automacao\AppData\Local\Programs\Python\Python38\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\edupi\AppData\Local\Programs\Python\Python310\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -65,7 +66,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Automacao\AppData\Local\Programs\Python\Python38\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\edupi\AppData\Local\Programs\Python\Python310\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -140,5 +141,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add programa IdentificadorPoseComAngulo" />
     <option name="LAST_COMMIT_MESSAGE" value="Add programa IdentificadorPoseComAngulo" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

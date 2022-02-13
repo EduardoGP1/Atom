@@ -7,7 +7,7 @@ mp_pose = mp.solutions.pose
 # For webcam input:
 a = 0
 while a == 0:
-    cap = cv2.VideoCapture("videos/boneco andando.gif")
+    cap = cv2.VideoCapture("videos/testeatom.mp4")
     with mp_pose.Pose(
             min_detection_confidence=0.1,
             min_tracking_confidence=0.1) as pose:
