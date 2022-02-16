@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6ca31e7-344f-436f-b795-edf53c1ac397" name="Changes" comment="Add programa IdentificadorPoseComAngulo como programa principal e os outros como apoio para o leitor de pose escrito por mim">
+    <list default="true" id="e6ca31e7-344f-436f-b795-edf53c1ac397" name="Changes" comment="Add videoangulo e o programa MeuLeitorDePoseComAngulo funcionando, porém com resultados dos ângulos ainda não corretos - verificar equação para calcular angulos corretamente">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +34,7 @@
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="Python.IdentificadorPoseComAngulo(original)">
+  <component name="RunManager" selected="Python.MeuLeitorDePoseComAngulo">
     <configuration name="CodificadorDeAngulo(original)" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -149,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644445451924</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add videoangulo e o programa MeuLeitorDePoseComAngulo funcionando, porém com resultados dos ângulos ainda não corretos - verificar equação para calcular angulos corretamente">
+      <created>1644964333954</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1644964333954</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,6 +173,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add programa IdentificadorPoseComAngulo" />
     <MESSAGE value="Add programa IdentificadorPoseComAngulo como programa principal e os outros como apoio para o leitor de pose escrito por mim" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add programa IdentificadorPoseComAngulo como programa principal e os outros como apoio para o leitor de pose escrito por mim" />
+    <MESSAGE value="Add videoangulo e o programa MeuLeitorDePoseComAngulo funcionando, porém com resultados dos ângulos ainda não corretos - verificar equação para calcular angulos corretamente" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add videoangulo e o programa MeuLeitorDePoseComAngulo funcionando, porém com resultados dos ângulos ainda não corretos - verificar equação para calcular angulos corretamente" />
   </component>
 </project>
