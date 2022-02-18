@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e6ca31e7-344f-436f-b795-edf53c1ac397" name="Changes" comment="Add videoangulo e o programa MeuLeitorDePoseComAngulo funcionando, porém com resultados dos ângulos ainda não corretos - verificar equação para calcular angulos corretamente">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MeuLeitorDePoseComAngulo.py" beforeDir="false" afterPath="$PROJECT_DIR$/MeuLeitorDePoseComAngulo.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +31,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/CodificadorDeAngulo(original).py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/MeuLeitorDePoseComAngulo.py" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -104,7 +105,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Automacao\AppData\Local\Programs\Python\Python38\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\edupi\AppData\Local\Programs\Python\Python310\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -119,11 +120,33 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.CodificadorDeAngulo(original)" />
       <item itemvalue="Python.IdentificadorPoseComAngulo(original)" />
       <item itemvalue="Python.MeuLeitorDePoseComAngulo" />
       <item itemvalue="Python.LeitorDePose(original)" />
+      <item itemvalue="Python.main" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -175,5 +198,37 @@
     <MESSAGE value="Add programa IdentificadorPoseComAngulo como programa principal e os outros como apoio para o leitor de pose escrito por mim" />
     <MESSAGE value="Add videoangulo e o programa MeuLeitorDePoseComAngulo funcionando, porém com resultados dos ângulos ainda não corretos - verificar equação para calcular angulos corretamente" />
     <option name="LAST_COMMIT_MESSAGE" value="Add videoangulo e o programa MeuLeitorDePoseComAngulo funcionando, porém com resultados dos ângulos ainda não corretos - verificar equação para calcular angulos corretamente" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="m2" />
+        <watch expression="pointsList" />
+        <watch expression="pt2" />
+        <watch expression="pt2" />
+        <watch expression="pt2" />
+        <watch expression="m2" />
+        <watch expression="pointsList" />
+        <watch expression="pointsList" />
+        <watch expression="pointsList" />
+        <watch expression="pt3" />
+        <watch expression="m1" />
+        <watch expression="pointsList" />
+        <watch expression="pointsList" />
+        <watch expression="pt1" />
+        <watch expression="pt1" />
+        <watch expression="pt1" />
+        <watch expression="pt1" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

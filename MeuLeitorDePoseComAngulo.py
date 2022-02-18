@@ -17,7 +17,7 @@ def getAngle(pointsList):
     angD = round(math.degrees(angR))
     cv2.putText(image, str(angD), (10, 60), cv2.FONT_HERSHEY_COMPLEX,
                 2, (0, 0, 255), 2, cv2.LINE_AA)
-    print(angD)
+    print("((", m2, "-", m1, ")/(1+(", m2, "x", m1, "=", angR, "->", angD)
 
 while a == 0:
     cap = cv2.VideoCapture("videos/videoangulo.mp4")
@@ -27,10 +27,7 @@ while a == 0:
         while cap.isOpened():
             success, image = cap.read()
             if cv2.waitKey(1) & 0xFF == 27:
-                cap.isOpened(0)
                 a=1
-                break
-            if not success:
                 break
 
     # To improve performance, optionally mark the image as not writeable to
@@ -57,4 +54,3 @@ while a == 0:
                 mp_pose.POSE_CONNECTIONS,
                 landmark_drawing_spec=mp_drawing_styles.get_default_pose_landmarks_style())
             cv2.imshow('Atom', image)
-
