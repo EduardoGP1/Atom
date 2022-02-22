@@ -13,7 +13,7 @@ while a == 0:
             min_tracking_confidence=0.1) as pose:
         while cap.isOpened():
             success, image = cap.read()
-            if cv2.waitKey(5) & 0xFF == 27:
+            if cv2.waitKey(0) & 0xFF == 27:
                 cap.isOpened(0)
             if not success:
                 print(cap)
@@ -35,6 +35,7 @@ while a == 0:
                 landmark_drawing_spec=mp_drawing_styles.get_default_pose_landmarks_style())
     # Flip the image horizontally for a selfie-view display.
             cv2.imshow('Atom', image)
-            if cv2.waitKey(5) & 0xFF == 27:
+            if cv2.waitKey(0) & 0xFF == 27:
                 break
-    cap.release()
+cap.release()
+cv2.destroyAllWindows()

@@ -9,15 +9,21 @@ mp_pose = mp.solutions.pose
 
 a = 0
 
-def getAngle(pointsList):
-    pt1, pt2, pt3 = pointsList[-3:]
-    m1 = (pt2[1] - pt1[1]) / (pt2[0] - pt1[0])
-    m2 = (pt3[1] - pt1[1]) / (pt3[0] - pt1[0])
-    angR = math.atan((m2 - m1) / (1 + (m2 * m1)))
-    angD = round(math.degrees(angR))
-    cv2.putText(image, str(angD), (10, 60), cv2.FONT_HERSHEY_COMPLEX,
+def getAngle(cotovelo, ombro, pulso):
+    print(cotovelo)
+    SegA = [ombro[0] - cotovelo[0], ombro[1] - cotovelo[1]]
+    SegB = [pulso[0] - cotovelo[0], pulso[1] - cotovelo[1]]
+    ProdEscalar = SegA[0]*SegB[0]+SegA[1]*SegB[1]
+    Comp_SegA = math.sqrt(SegA[0]**2+SegA[1]**2)
+    Comp_SegB = math.sqrt(SegB[0]**2+SegB[1]**2)
+    angulo = math.acos(ProdEscalar/(Comp_SegA*Comp_SegB))
+    cv2.putText(image, str(angulo), (10, 60), cv2.FONT_HERSHEY_COMPLEX,
                 2, (0, 0, 255), 2, cv2.LINE_AA)
-    print("((", m2, "-", m1, ")/(1+(", m2, "x", m1, "=", angR, "->", angD)
+    #angR = math.atan((m2 - m1) / (1 + (m2 * m1)))
+    #angD = round(math.degrees(angR))
+    #cv2.putText(image, str(angD), (10, 60), cv2.FONT_HERSHEY_COMPLEX,
+    #            2, (0, 0, 255), 2, cv2.LINE_AA)
+    #print("((", m2, "-", m1, ")/(1+(", m2, "x", m1, "=", angR, "->", angD)
 
 while a == 0:
     cap = cv2.VideoCapture("videos/videoangulo.mp4")
@@ -36,15 +42,14 @@ while a == 0:
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
             results = pose.process(image)
             landmarks = results.pose_landmarks.landmark
-            shoulder = [landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value].x,
+            ombro = [landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value].x,
                         landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value].y]
-            elbow = [landmarks[mp_pose.PoseLandmark.LEFT_ELBOW.value].x,
+            cotovelo = [landmarks[mp_pose.PoseLandmark.LEFT_ELBOW.value].x,
                      landmarks[mp_pose.PoseLandmark.LEFT_ELBOW.value].y]
-            wrist = [landmarks[mp_pose.PoseLandmark.LEFT_WRIST.value].x,
+            pulso = [landmarks[mp_pose.PoseLandmark.LEFT_WRIST.value].x,
                      landmarks[mp_pose.PoseLandmark.LEFT_WRIST.value].y]
-            angle = [shoulder, elbow, wrist]
 
-            getAngle(angle)
+            getAngle(cotovelo, ombro, pulso)
     # Draw the pose annotation on the image.
             image.flags.writeable = True
             image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
@@ -53,4 +58,5 @@ while a == 0:
                 results.pose_landmarks,
                 mp_pose.POSE_CONNECTIONS,
                 landmark_drawing_spec=mp_drawing_styles.get_default_pose_landmarks_style())
+            image = cv2.resize(image, (800, 500))
             cv2.imshow('Atom', image)
