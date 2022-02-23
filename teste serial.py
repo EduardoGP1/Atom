@@ -2,7 +2,7 @@ import cv2
 import serial
 import time
 
-ser = serial.Serial('COM6', 9600, timeout=10)
+ser = serial.Serial('COM4', 9600, timeout=10)
 a=0
 
 while a==0:

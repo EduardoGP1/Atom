@@ -3,12 +3,14 @@ import serial
 import mediapipe as mp
 import numpy as np
 import math
+import time
+from tkinter import *
 
 mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 mp_pose = mp.solutions.pose
 
-ser = serial.Serial('COM6', 9600)
+esp32 = serial.Serial('COM4', 9600)
 
 a = 0
 
@@ -19,10 +21,13 @@ def getAngle(cotovelo, ombro, pulso):
     Comp_SegA = math.sqrt(SegA[0]**2+SegA[1]**2)
     Comp_SegB = math.sqrt(SegB[0]**2+SegB[1]**2)
     angulo = math.acos(ProdEscalar/(Comp_SegA*Comp_SegB))*180/3#formula original se dividia por 3,14
-    #ser.write(b"angulo")
+    angulo = round(angulo)
+    angulo = str(angulo)
+    print ()
+    if cv2.waitKey(1) & 0xFF == ord('e'):
+        esp32.write(angulo.encode())
     cv2.putText(image, str(angulo), (10, 60), cv2.FONT_HERSHEY_COMPLEX,
-                2, (0, 0, 255), 2, cv2.LINE_AA)
-    print (ser.read(20))
+                2, (0, 0, 255), 2, cv2.LINEe_AA)
 
 
 while a == 0:
@@ -35,9 +40,6 @@ while a == 0:
             if cv2.waitKey(1) & 0xFF == 27:
                 a=1
                 break
-
-            #elif cv2.waitKey(1) & 0xFF == ord("s"):
-
 
     # To improve performance, optionally mark the image as not writeable to
     # pass by reference.
@@ -63,4 +65,4 @@ while a == 0:
                 landmark_drawing_spec=mp_drawing_styles.get_default_pose_landmarks_style())
             image = cv2.resize(image, (700, 500))
             cv2.imshow('Atom', image)
-ser.close()
+esp32.close()

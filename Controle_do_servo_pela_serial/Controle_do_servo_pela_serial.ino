@@ -25,16 +25,27 @@ void setup()
 void loop() 
 {
   
-  if(Serial.available()>0 && Serial.available()<180)
+  if(Serial.available())
   {
-    int state = Serial.parseInt();
   
+    int state = Serial.parseInt();
+
+    if (state > 0 && state < 180)
+    {
       Serial.print(" | ");
       Serial.println(state);
       Serial.print("Servo posicionado em ");
       Serial.print(state);
       Serial.println(" graus");
       myservo.write(state);
+    }
+
+    else
+    {
+      state = 50;
+      myservo.write(state);
+    }
+    
   
   } //end if serial available
 

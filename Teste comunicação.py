@@ -1,10 +1,11 @@
 import serial
 from tkinter import *
+import numpy
 
 valor_led = 1
 valor_led2 = 1
 
-esp32 = serial.Serial('COM6', 9600)
+esp32 = serial.Serial('COM4', 9600)
 
 
 
@@ -15,12 +16,15 @@ def funcao_botao():
 
     if valor_led == 1:
         valor_led = 0
-        esp32.write(b'1')
+        graus = "1"
+        esp32.write(graus.encode())
         label_estado_led["text"]="Ligado"
         label_estado_led["foreground"] = "blue"
     else:
         valor_led = 1
-        esp32.write(b'45')
+        graus = "45"
+        print (type(graus))
+        esp32.write(graus.encode())
         label_estado_led["text"] = "Desligado"
         label_estado_led["foreground"] = "blue"
 
@@ -30,13 +34,19 @@ def funcao_botao2():
 
     if valor_led2 == 1:
         valor_led2 = 0
-        que = "90"
-        esp32.write(b'que')
+        graus = "90.5"
+        print(type(graus))
+        esp32.write(graus.encode())
         label_estado_led2["text"] = "Ligado"
         label_estado_led2["foreground"] = "blue"
     else:
         valor_led2 = 1
-        esp32.write(b'170')
+        graus = "170.5"
+        graus = float (graus)
+        graus = round(graus)
+        print (graus)
+        graus = str(graus)
+        esp32.write(graus.encode())
         label_estado_led2["text"] = "Desligado"
         label_estado_led2["foreground"] = "blue"
 
