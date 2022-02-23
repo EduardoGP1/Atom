@@ -1,13 +1,7 @@
-#include <Servo.h>   //inclui biblioteca para controle de servo
+#include <Servo.h>
 
-// ========================================================================================================
-// --- Objetos ---
-String fraseRecebida = ""; // a String to hold incoming data
-bool fraseCompleta = false;  // whether the string is complete
-double dfhjidmghd = 12.78;
+Servo myservo;       //cria objeto para 1 servo motor
 
-Servo myservoA = 90;
-Servo myservoB = 90; 
 
 // ========================================================================================================
 // --- Configurações Iniciais ---
@@ -15,13 +9,12 @@ void setup()
 {
 
   Serial.begin(9600);   //inicializa serial em 9600 bps
-  while (!Serial);      //aguarda iniciliazação da serial
-  fraseRecebida.reserve(100);    //reserve 200 bytes pra inputString
   
-  myservoA.attach(9);    //associa servoA ao pino 9
-  myservoB.attach(8);    //associa servoB ao pino 8
-
-  Serial.println("Digite o grau de movimento para A e/ou B e tecle enter...");
+  while (!Serial);      //aguarda iniciliazação da serial
+  
+  delay(1000);          //aguarda 1 segundo
+   
+  myservo.attach(9);    //associa servo ao pino 9
 
  
 } //end setup
@@ -32,27 +25,16 @@ void setup()
 void loop() 
 {
   
-  if(Serial.available())
+  if(Serial.available()>0 && Serial.available()<180)
   {
-    if (
     int state = Serial.parseInt();
   
-  
-    if (state > 0 && state <= 180)
-    {
       Serial.print(" | ");
-      Serial.println(estadoa);
-      Serial.print(" | ");
-      Serial.println(estadob);
-      Serial.print("ServoA em");
-      Serial.print(estadoa);
-      Serial.print("/nServoB em");
-      Serial.print(estadob);
+      Serial.println(state);
+      Serial.print("Servo posicionado em ");
+      Serial.print(state);
       Serial.println(" graus");
-      myservoA.write(estadoa);
-      myservoB.write(estadob);
-      
-    }
+      myservo.write(state);
   
   } //end if serial available
 
