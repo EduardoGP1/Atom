@@ -27,7 +27,7 @@ def getAngle(cotovelo, ombro, pulso):
     if cv2.waitKey(1) & 0xFF == ord('e'):
         esp32.write(angulo.encode())
     cv2.putText(image, str(angulo), (10, 60), cv2.FONT_HERSHEY_COMPLEX,
-                2, (0, 0, 255), 2, cv2.LINEe_AA)
+                2, (0, 0, 255), 2, cv2.LINE_AA)
 
 
 while a == 0:
