@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6ca31e7-344f-436f-b795-edf53c1ac397" name="Changes" comment="add tabela angular">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodificadorDeAngulo(original).py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeitorDePose(original).py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MeuLeitorDePoseComAngulo.py" beforeDir="false" afterPath="$PROJECT_DIR$/MeuLeitorDePoseComAngulo.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +37,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Teste comunicação.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../dados" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
