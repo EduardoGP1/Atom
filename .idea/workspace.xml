@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6ca31e7-344f-436f-b795-edf53c1ac397" name="Changes" comment="add tabela angular">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e6ca31e7-344f-436f-b795-edf53c1ac397" name="Changes" comment="add atualizações" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645159511332</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add atualizações">
+      <created>1647032455661</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647032455661</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,7 +172,8 @@
     <MESSAGE value="Add programa IdentificadorPoseComAngulo como programa principal e os outros como apoio para o leitor de pose escrito por mim" />
     <MESSAGE value="Add videoangulo e o programa MeuLeitorDePoseComAngulo funcionando, porém com resultados dos ângulos ainda não corretos - verificar equação para calcular angulos corretamente" />
     <MESSAGE value="add tabela angular" />
-    <option name="LAST_COMMIT_MESSAGE" value="add tabela angular" />
+    <MESSAGE value="add atualizações" />
+    <option name="LAST_COMMIT_MESSAGE" value="add atualizações" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
