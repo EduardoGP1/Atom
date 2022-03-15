@@ -8,7 +8,7 @@ Servo myservo;       //cria objeto para 1 servo motor
 void setup()
 {
 
-  Serial.begin(9600);   //inicializa serial em 9600 bps
+  Serial.begin(2000000);   //inicializa serial em 9600 bps
   
   while (!Serial);      //aguarda iniciliazação da serial
   
@@ -32,19 +32,19 @@ void loop()
 
     if (state > 0 && state < 180)
     {
-      Serial.print(" | ");
-      Serial.println(state);
-      Serial.print("Servo posicionado em ");
-      Serial.print(state);
-      Serial.println(" graus");
+      //Serial.print(" | ");
+      //Serial.println(state);
+      //Serial.print("Servo posicionado em ");
+      //Serial.print(state);
+      //Serial.println(" graus");
       myservo.write(state);
     }
 
-    else
-    {
-      state = 50;
-      myservo.write(state);
-    }
+    //else
+    //{
+      //state = 50;
+      //myservo.write(state);
+    //}
     
   
   } //end if serial available
