@@ -12,7 +12,7 @@ void setup()
   
   while (!Serial);      //aguarda iniciliazação da serial
   
-  delay(1000);          //aguarda 1 segundo
+  //delay(1000);          //aguarda 1 segundo
    
   myservo.attach(9);    //associa servo ao pino 9
 

@@ -24,10 +24,10 @@ def getAngle(cotovelo, ombro, pulso):
     angulo = round(angulo)
     angulo = str(angulo)
     print ()
-    if cv2.waitKey(1) & 0xFF == ord('e'):
-        arduino.write(angulo.encode())
-    cv2.putText(image, str(angulo), (10, 60), cv2.FONT_HERSHEY_COMPLEX,
-                2, (0, 0, 255), 2, cv2.LINE_AA)
+    if cv2.waitKey(1) & 0xFF == 27:
+        arduino.write((angulo + '\o').encode())
+    #cv2.putText(image, str(angulo), (10, 60), cv2.FONT_HERSHEY_COMPLEX,
+                #2, (0, 0, 255), 2, cv2.LINE_AA)#Colocar o angulo por escrito na imagem do vídeo
 
 
 while a == 0:
@@ -37,7 +37,7 @@ while a == 0:
             min_tracking_confidence=0.1) as pose:
         while cap.isOpened():
             success, image = cap.read()
-            if cv2.waitKey(1) & 0xFF == 27:
+            if cv2.waitKey(1) & 0xFF == ord('e'):
                 a=1
                 break
 
