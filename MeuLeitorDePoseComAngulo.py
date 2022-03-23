@@ -10,7 +10,7 @@ mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 mp_pose = mp.solutions.pose
 
-arduino = serial.Serial('COM4', 2000000)
+arduino = serial.Serial('COM6', 2000000)
 
 a = 0
 
@@ -31,7 +31,7 @@ def getAngle(cotovelo, ombro, pulso):
 
 
 while a == 0:
-    cap = cv2.VideoCapture("videos/videoangulo.mp4")
+    cap = cv2.VideoCapture("videos/testepatom.mp4")
     with mp_pose.Pose(
             min_detection_confidence=0.1,
             min_tracking_confidence=0.1) as pose:
