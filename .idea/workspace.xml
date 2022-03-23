@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e6ca31e7-344f-436f-b795-edf53c1ac397" name="Changes" comment="Atualizações importantes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MeuLeitorDePoseComAngulo.py" beforeDir="false" afterPath="$PROJECT_DIR$/MeuLeitorDePoseComAngulo.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,10 +132,10 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.MeuLeitorDePoseComAngulo" />
       <item itemvalue="Python.Teste comunicação" />
       <item itemvalue="Python.teste serial" />
       <item itemvalue="Python.teste" />
-      <item itemvalue="Python.MeuLeitorDePoseComAngulo" />
     </list>
     <recent_temporary>
       <list>
