@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6ca31e7-344f-436f-b795-edf53c1ac397" name="Changes" comment="Atualizações importantes">
+    <list default="true" id="e6ca31e7-344f-436f-b795-edf53c1ac397" name="Changes" comment="Add video mais 1 video teste">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MeuLeitorDePoseComAngulo.py" beforeDir="false" afterPath="$PROJECT_DIR$/MeuLeitorDePoseComAngulo.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647979033386</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add video mais 1 video teste">
+      <created>1648004616540</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1648004616540</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -218,7 +227,8 @@
     <MESSAGE value="add tabela angular" />
     <MESSAGE value="add atualizações" />
     <MESSAGE value="Atualizações importantes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atualizações importantes" />
+    <MESSAGE value="Add video mais 1 video teste" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add video mais 1 video teste" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
