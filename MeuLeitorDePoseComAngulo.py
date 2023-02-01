@@ -10,7 +10,7 @@ mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 mp_pose = mp.solutions.pose
 
-#arduino = serial.Serial('COM6', 2000000)
+arduino = serial.Serial('COM4', 2000000)
 
 a = 0
 
@@ -24,27 +24,34 @@ def getAngle(cotovelo, ombro, pulso):
     #angulo = round(angulo)
     #angulo = str(angulo)
 
-    vetor_cotombro = [cotovelo[0] - ombro[0], cotovelo[1] - ombro[1], cotovelo[2] - ombro[2]]
+    vetor_cotombro = [cotovelo[0] - ombro[0], cotovelo[1] - ombro[1]#, cotovelo[2] - ombro[2]
+                      ]
 
-    vetor_cotpulso = [cotovelo[0] - pulso[0], cotovelo[1] - pulso[1], cotovelo[2] - pulso[2]]
+    vetor_cotpulso = [cotovelo[0] - pulso[0], cotovelo[1] - pulso[1]#, cotovelo[2] - pulso[2]
+                      ]
 
     modulo_cotombro = math.sqrt((vetor_cotombro[0]) ** 2 +
-        (vetor_cotombro[1]) ** 2 + (vetor_cotombro[2]) ** 2)
+        (vetor_cotombro[1]) ** 2 #+ (vetor_cotombro[2]) ** 2
+    )
 
     modulo_cotpulso = math.sqrt((vetor_cotpulso[0]) ** 2 +
-        (vetor_cotpulso[1]) ** 2 + (vetor_cotpulso[2]) ** 2)
+        (vetor_cotpulso[1]) ** 2 #+ (vetor_cotpulso[2]) ** 2
+    )
 
-    angulo_cotovelo = math.degrees(math.acos(((vetor_cotombro[0]*vetor_cotpulso[0])+(vetor_cotombro[1]*vetor_cotpulso[1])+(vetor_cotombro[2]*vetor_cotpulso[2]))/
+    angulo_cotovelo = math.degrees(math.acos(((vetor_cotombro[0]*vetor_cotpulso[0])+(vetor_cotombro[1]*vetor_cotpulso[1])#+(vetor_cotombro[2]*vetor_cotpulso[2])
+    )/
                                              (modulo_cotombro*modulo_cotpulso)))
+    angulo_cotovelo = round(angulo_cotovelo)
+    angulo_cotovelo = str(angulo_cotovelo)
 
     print (cotovelo[0], cotovelo[1], cotovelo[2], ombro[0], ombro[1], ombro[2], pulso[0], pulso[1], pulso[2], angulo_cotovelo)
-    #if cv2.waitKey(1) & 0xFF == 27:
-        #arduino.write((angulo + '\0').encode())
-    #cv2.putText(image, str(angulo), (10, 60), cv2.FONT_HERSHEY_COMPLEX,
-                #2, (0, 0, 255), 2, cv2.LINE_AA)#Colocar o angulo por escrito na imagem do vídeo
+    if cv2.waitKey(1) & 0xFF == 27:
+        arduino.write((angulo_cotovelo + '\0').encode())
+    cv2.putText(image, str(angulo_cotovelo), (10, 60), cv2.FONT_HERSHEY_COMPLEX,
+                2, (0, 0, 255), 2, cv2.LINE_AA)#Colocar o angulo por escrito na imagem do vídeo
 
 while a == 0:
-    cap = cv2.VideoCapture("videos/testepatom1.mp4")
+    cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
     with mp_pose.Pose(
             min_detection_confidence=0.1,
             min_tracking_confidence=0.1) as pose:
@@ -60,15 +67,24 @@ while a == 0:
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
             results = pose.process(image)
             landmarks = results.pose_landmarks.landmark
-            ombro = [landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value].x,
-                        landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value].y,
-                     landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value].z]
-            cotovelo = [landmarks[mp_pose.PoseLandmark.LEFT_ELBOW.value].x,
-                        landmarks[mp_pose.PoseLandmark.LEFT_ELBOW.value].y,
-                        landmarks[mp_pose.PoseLandmark.LEFT_ELBOW.value].z]
-            pulso = [landmarks[mp_pose.PoseLandmark.LEFT_WRIST.value].x,
-                     landmarks[mp_pose.PoseLandmark.LEFT_WRIST.value].y,
-                     landmarks[mp_pose.PoseLandmark.LEFT_WRIST.value].z]
+            ombro = [landmarks[mp_pose.PoseLandmark.RIGHT_SHOULDER.value].x,
+                         landmarks[mp_pose.PoseLandmark.RIGHT_SHOULDER.value].y,
+                      landmarks[mp_pose.PoseLandmark.RIGHT_SHOULDER.value].z]
+            cotovelo = [landmarks[mp_pose.PoseLandmark.RIGHT_ELBOW.value].x,
+                         landmarks[mp_pose.PoseLandmark.RIGHT_ELBOW.value].y,
+                         landmarks[mp_pose.PoseLandmark.RIGHT_ELBOW.value].z]
+            pulso = [landmarks[mp_pose.PoseLandmark.RIGHT_WRIST.value].x,
+                      landmarks[mp_pose.PoseLandmark.RIGHT_WRIST.value].y,
+                      landmarks[mp_pose.PoseLandmark.RIGHT_WRIST.value].z]
+           # ombro = [landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value].x,
+           #             landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value].y,
+           #          landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value].z]
+           # cotovelo = [landmarks[mp_pose.PoseLandmark.LEFT_ELBOW.value].x,
+           #             landmarks[mp_pose.PoseLandmark.LEFT_ELBOW.value].y,
+           #             landmarks[mp_pose.PoseLandmark.LEFT_ELBOW.value].z]
+           # pulso = [landmarks[mp_pose.PoseLandmark.LEFT_WRIST.value].x,
+           #          landmarks[mp_pose.PoseLandmark.LEFT_WRIST.value].y,
+           #          landmarks[mp_pose.PoseLandmark.LEFT_WRIST.value].z]
 
             getAngle(cotovelo, ombro, pulso)
     # Draw the pose annotation on the image.
@@ -81,4 +97,4 @@ while a == 0:
                 landmark_drawing_spec=mp_drawing_styles.get_default_pose_landmarks_style())
             image = cv2.resize(image, (700, 500))
             cv2.imshow('Atom', image)
-#arduino.close()
+arduino.close()
